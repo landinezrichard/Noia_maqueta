@@ -1,0 +1,142 @@
+@import "nib"
+//Al parecer ahora "nib" incluye normalize, sin embargo revisar los estilos
+// @import "normalize.styl"
+
+//---------------------------------------------------------------------
+// FUENTES
+//---------------------------------------------------------------------
+
+
+@font-face
+	font-family:"CenturyGothicRegular";
+	src: url('../fonts/CenturyGothicRegular.ttf');
+
+@font-face
+	font-family:"CenturyGothicBold";
+	src: url('../fonts/CenturyGothicBold.ttf');
+
+
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,700')
+
+//---------------------------------------------------------------------
+// ICONOS COMO FUENTES
+//---------------------------------------------------------------------
+
+/*
+@import "iconfonts.styl"
+*/
+
+//---------------------------------------------------------------------
+// COLORES
+//---------------------------------------------------------------------
+
+$azul_face = #3B5998
+$azul_twitter = #55ACEE
+$rojo_gooplus = #DD4B39
+
+$verde_noia = #00CBBE
+
+$black_footer = #1A1A1A
+
+$transparent_black = rgba(0,0,0,.5);
+
+//---------------------------------------------------------------------
+// MIXINS
+//---------------------------------------------------------------------
+
+transicion(duracion = 0.3s)
+	transition: all duracion linear
+
+//---------------------------------------------------------------------
+// ESTILOS GENERALES
+//---------------------------------------------------------------------
+
+html
+	font-size 16px
+	height 100%
+	font-family 'CenturyGothicRegular', sans-serif
+	
+body
+	height 100%
+	background white
+	
+img
+	display inline-block
+	max-width 100%
+	height auto
+
+figure
+	margin 0
+	padding 0
+
+a
+	text-decoration none
+	color $verde_noia
+	transicion()
+	
+	&:hover
+		text-decoration: underline
+		
+video, object, embed, iframe
+	position absolute
+	top 0
+	left 0
+	width 100%
+	height 100%
+	
+*
+	box-sizing border-box
+	border 1px solid red
+
+//---------------------------------------------------------------------
+// UTILIDADES (REUSABLE CLASES)
+//---------------------------------------------------------------------
+
+.u-centrar
+	margin 0 auto
+	max-width 960px
+	text-align center
+	
+.Main-content
+	margin-top 100px
+	
+.Main-content-home
+	margin-top 0
+	
+//---------------------------------------------------------------------
+// COMPONENTES
+//---------------------------------------------------------------------
+
+/*HEADER*/
+@import "../components/Header/estilos.styl"
+
+/*MENU*/
+@import "../components/Menu/estilos.styl"
+
+/*BANNER*/
+@import "../components/Banner/estilos.styl"
+
+/*FOOTER*/
+@import "../components/Footer/estilos.styl"
+
+//---------------------------------------------------------------------
+// RESPONSIVE
+//---------------------------------------------------------------------
+
+/*
+@media screen and (min-width:840px)
+	.Main-content
+		margin-top 94px
+
+@media screen and (min-width:960px)
+	.u-halfColumn
+		display inline-block
+		width 47%
+		vertical-align top
+
+@media screen and (min-width:1100px)
+	.Twitter
+		display inline-block
+	.twitter-timeline
+		height 550px
+*/

@@ -1,0 +1,44 @@
+/*BUTTONS*/
+
+//boton base
+.Button
+	display inline-block
+	background-color #7f8c8d
+	color #fff
+	font-size 1.25em
+	margin 20px
+	padding 10px 0
+	text-align center
+	width 200px
+	text-decoration none
+	box-shadow 0px 3px 0px #373c3c
+	
+	//margen pra el icono
+	
+	& span
+		margin-right 10px
+		
+	//con colores
+	&.blue
+		background-color #3498db
+		box-shadow 0px 3px 0px #266792
+		
+	&.green
+		background-color $verde_noia_dark
+		box-shadow 0px 0px 0px
+		margin 15px 0
+		font-size 1.79rem
+		font-family 'CenturyGothicBold', sans-serif
+	
+	//diferentes medidas
+	&.medium
+		width 217px
+		
+	//con efectos
+	&.radius
+		border-radius 50px
+		
+	//Hover normal		
+	&:hover
+		box-shadow 0px 0px 0px
+		padding-top 7px

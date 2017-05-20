@@ -8,7 +8,8 @@
 	left 0
 	right 0
 	z-index 10
-	height 100px
+	min-height 100px
+	max-height 100%
 	&-logo
 		cursor pointer
 		display inline-block
@@ -29,3 +30,7 @@
 		padding 0
 		position absolute
 		width 1px
+		
+@media screen and (min-width:840px)
+	.Header
+		overflow none

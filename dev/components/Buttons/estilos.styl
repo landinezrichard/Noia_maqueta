@@ -29,8 +29,11 @@
 		margin 15px 0
 		font-size 1.79rem
 		font-family 'CenturyGothicBold', sans-serif
-	
+
 	//diferentes medidas
+	&.small
+		width 110px	
+
 	&.medium
 		width 217px
 		
@@ -42,3 +45,55 @@
 	&:hover
 		box-shadow 0px 0px 0px
 		padding-top 7px
+		
+	&.carrito
+		font-family 'CenturyGothicRegular', sans-serif
+		height 33px	
+		box-shadow 0px 0px 0px
+		color $black_light
+		background-color $verde_noia_dark
+		display flex
+		flex-flow row nowrap
+		align-items center
+		justify-content center
+		border-radius 5px
+		padding 10px 7px 10px 4px
+		
+		& span.icon-carro
+			font-size 1.56rem
+		
+		&-txt
+			font-size 0.71rem
+			padding 12px 0
+			vertical-align middle
+			margin-right 0
+			
+		&:hover
+			padding 10px 7px 10px 4px
+			text-decoration none
+/*BUTTONCAR*/
+.ButtonCar
+	display inline-block
+	margin 20px
+	text-align center
+	width 200px
+	height 33px
+	text-decoration none
+	font-family 'CenturyGothicRegular', sans-serif	
+	color $black_light
+	background-color $verde_noia_dark
+	// display flex
+	// flex-flow row nowrap
+	// align-items center
+	// justify-content center
+	border-radius 5px
+	padding 10px 7px 10px 4px
+	
+	& span.icon-carro
+		font-size 1.56rem
+		
+	&-txt
+		font-size 0.71rem
+		padding 12px 0
+		vertical-align middle
+		margin-right 0

@@ -1,3 +1,7 @@
 $(document).ready(function() {
-	console.log("Scripts Corriendo OK");
+	/*Mostrar Menu en Movil*/
+	$('.Menu-btn').click(function(event){
+		event.preventDefault();
+		$('.Menu').slideToggle();
+	});
 });

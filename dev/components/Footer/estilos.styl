@@ -46,9 +46,24 @@
 		& div
 			display flex
 			justify-content space-around
+			flex-flow column wrap
+			height 200px
 			
 		& div a
 			cursor pointer
 			color white
 			font-size 0.59rem
 			font-family "CenturyGothicRegular"
+			width 45%
+			height 40px
+
+@media screen and (min-width:840px)
+	.Footer
+		/*Menu*/
+		&-menu
+			& div
+				flex-flow row wrap
+				height auto
+			& div a
+				width auto
+				height auto

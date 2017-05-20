@@ -1,0 +1,95 @@
+/*COLECCION*/
+
+.Coleccion
+	& .u-centrar
+		padding 7px
+		
+	&-header
+		width 100%
+		
+	&-selector
+		width 100%
+		text-transform uppercase
+		display inline-block
+		font-family 'CenturyGothicRegular', sans-serif
+		font-size 1em
+		font-weight 500
+		
+		& a
+			color black
+			display inline-block
+			margin 15px 4px
+			vertical-align middle
+			
+			&.selected
+				color $verde_noia
+				font-weight 600
+			
+			&:hover
+				font-weight 600
+				color $verde_noia
+	&-title
+		width 78%
+		text-transform uppercase
+		display inline-block
+		font-family 'CenturyGothicRegular', sans-serif
+		font-size 1.2rem
+		font-weight 400
+		
+	&-categorias
+		text-transform uppercase
+		width 100%
+		display inline-block
+		vertical-align top
+		text-align left
+		
+	&-categoriasTitle
+		font-family 'CenturyGothicRegular', sans-serif
+		font-size 0.93rem
+		font-weight 600
+	
+	&-categoriasList
+		display flex
+		flex-flow row wrap
+		
+	&-categoriasItem
+		color black
+		text-decoration underline
+		width auto
+		display inline-block
+		font-family 'CenturyGothicRegular', sans-serif
+		font-size 0.87rem
+		font-weight 500
+		margin 10px
+		
+		&:hover
+			font-weight 600
+			color $verde_noia
+		
+	&-galery
+		width 100%
+		display inline-block
+		
+	&-galeryItem
+		display inline-block
+		width 240px
+		height 240px
+		box-sizing border-box
+		box-shadow 1px 1px 2px $light_gray
+		margin 10px .5%
+		
+@media screen and (min-width:600px)
+	.Coleccion
+		&-selector
+			width 20%
+		&-title
+			width 78%
+		&-categorias
+			width 20%
+		&-categoriasList
+			display block
+		&-categoriasItem
+			width 100%
+			margin 10px 0
+		&-galery
+			width 78%

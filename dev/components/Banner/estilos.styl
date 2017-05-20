@@ -36,7 +36,7 @@
 			& span
 				font-size 1.91rem
 				
-	&-btnDown
+	&-btnDownContainer
 		position absolute
 		bottom 18px
 		left 0
@@ -44,12 +44,13 @@
 		color $verde_noia
 		font-size 3.5rem
 		
-		& span.icon-flecha-down
-			cursor pointer
+	&-btnDown
+		cursor pointer
+		display none
 			
-			&:hover
-				font-size 3.8rem
-				transicion()
+		&:hover
+			font-size 3.8rem
+			transicion()
 
 /*Puntos Owl*/
 
@@ -62,3 +63,8 @@
 // .Banner .owl-controls .owl-page.active span,
 // .Banner .owl-controls .owl-page:hover span
 // 	background $naranja1
+
+@media screen and (min-width:600px)
+	.Banner
+		&-btnDown
+			display inline

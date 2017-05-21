@@ -1,0 +1,55 @@
+section.Carrito
+	div.u-centrar
+		div.Page-titleContainer
+			h2.Page-title
+				|	Carrito de compras
+			span.icon-carro
+		div.Carrito-content
+			form
+				div.Carrito-tabla
+					div.Carrito-tablaHeading
+						div.Carrito-tablaCell
+							p
+								|	Producto
+						div.Carrito-tablaCell
+							p
+								|	Precio unidad
+						div.Carrito-tablaCell
+							p
+								|	Cantidad
+						div.Carrito-tablaCell
+							p
+								|	Subtotal
+						div.Carrito-tablaCell
+							p
+								|	Eliminar
+					div.Carrito-tablaRow
+						div.Carrito-tablaCell
+							a(href="#").Carrito-thumbnail
+								img(src="../images/03-colecciones/1.jpg")
+							span.Carrito-name
+								|	Collar custom 1
+						div.Carrito-tablaCell
+							p
+								|	$ 25.000
+						div.Carrito-tablaCell
+							div.quantity
+								input(type="number", step="1", min="0", value="1")
+						div.Carrito-tablaCell
+							p
+								|	$ 25.000
+						div.Carrito-tablaCell
+							a(href="#").Carrito-eliminar
+								span.icon-eliminar-x
+					div.Carrito-tablaRow.Carrito-summary
+						div.Carrito-tablaCell
+							label(for="coupon_code")
+								|	Si tienes código de descuento
+							input(type="text", name="coupon_code")#coupon_code
+							input(type="submit", name="apply_coupon", value="Enviar")
+						div.Carrito-tablaCell
+							p
+								|	Total
+						div.Carrito-tablaCell
+							p
+								|	$ 25.000

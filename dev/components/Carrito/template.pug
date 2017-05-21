@@ -8,48 +8,48 @@ section.Carrito
 			form
 				div.Carrito-tabla
 					div.Carrito-tablaHeading
-						div.Carrito-tablaCell
+						div.Carrito-tablaCell.col-4
 							p
 								|	Producto
-						div.Carrito-tablaCell
+						div.Carrito-tablaCell.col-2
 							p
 								|	Precio unidad
-						div.Carrito-tablaCell
+						div.Carrito-tablaCell.col-2
 							p
 								|	Cantidad
-						div.Carrito-tablaCell
+						div.Carrito-tablaCell.col-2
 							p
 								|	Subtotal
-						div.Carrito-tablaCell
+						div.Carrito-tablaCell.col-2
 							p
 								|	Eliminar
 					div.Carrito-tablaRow
-						div.Carrito-tablaCell
+						div.Carrito-tablaCell.col-4
 							a(href="#").Carrito-thumbnail
 								img(src="../images/03-colecciones/1.jpg")
 							span.Carrito-name
 								|	Collar custom 1
-						div.Carrito-tablaCell
+						div.Carrito-tablaCell.col-2
 							p
 								|	$ 25.000
-						div.Carrito-tablaCell
+						div.Carrito-tablaCell.col-2
 							div.quantity
 								input(type="number", step="1", min="0", value="1")
-						div.Carrito-tablaCell
+						div.Carrito-tablaCell.col-2
 							p
 								|	$ 25.000
-						div.Carrito-tablaCell
+						div.Carrito-tablaCell.col-2
 							a(href="#").Carrito-eliminar
 								span.icon-eliminar-x
 					div.Carrito-tablaRow.Carrito-summary
-						div.Carrito-tablaCell
+						div.Carrito-tablaCell.col-6
 							label(for="coupon_code")
 								|	Si tienes código de descuento
 							input(type="text", name="coupon_code")#coupon_code
 							input(type="submit", name="apply_coupon", value="Enviar")
-						div.Carrito-tablaCell
+						div.Carrito-tablaCell.col-3
 							p
 								|	Total
-						div.Carrito-tablaCell
+						div.Carrito-tablaCell.col-3
 							p
 								|	$ 25.000

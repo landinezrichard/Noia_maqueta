@@ -6,50 +6,50 @@ section.Carrito
 			span.icon-carro
 		div.Carrito-content
 			form
-				div.Carrito-tabla
-					div.Carrito-tablaHeading
-						div.Carrito-tablaCell.col-4
-							p
+				table.shop_table.shop_table_responsive.cart(cellspacing="0")
+					thead
+						tr
+							th.product-name(colspan="2")
 								|	Producto
-						div.Carrito-tablaCell.col-2
-							p
+							th.product-price
 								|	Precio unidad
-						div.Carrito-tablaCell.col-2
-							p
+							th.product-quantity
 								|	Cantidad
-						div.Carrito-tablaCell.col-2
-							p
+							th.product-subtotal
 								|	Subtotal
-						div.Carrito-tablaCell.col-2
-							p
+							th.product-remove
 								|	Eliminar
-					div.Carrito-tablaRow
-						div.Carrito-tablaCell.col-4
-							a(href="#").Carrito-thumbnail
-								img(src="../images/03-colecciones/1.jpg")
-							span.Carrito-name
-								|	Collar custom 1
-						div.Carrito-tablaCell.col-2
-							p
+					tbody
+						tr.car_item
+							td.product-thumbnail
+								a(href="#").Carrito-thumbnail
+									img(src="../images/03-colecciones/1.jpg")
+							td.product-name(data-title="Producto")
+								a(href="#")
+									|	Collar custom 1
+							td.product-price(data-title="Precio unidad")
 								|	$ 25.000
-						div.Carrito-tablaCell.col-2
-							div.quantity
-								input(type="number", step="1", min="0", value="1")
-						div.Carrito-tablaCell.col-2
-							p
+							td.product-quantity(data-title="Cantidad")
+								div.quantity
+									input(type="number", step="1", min="0", value="1")
+							td.product-subtotal(data-title="Subtotal")
 								|	$ 25.000
-						div.Carrito-tablaCell.col-2
-							a(href="#").Carrito-eliminar
-								span.icon-eliminar-x
-					div.Carrito-tablaRow.Carrito-summary
-						div.Carrito-tablaCell.col-6
-							label(for="coupon_code")
-								|	Si tienes código de descuento
-							input(type="text", name="coupon_code")#coupon_code
-							input(type="submit", name="apply_coupon", value="Enviar")
-						div.Carrito-tablaCell.col-3
-							p
+							td.product-remove(data-title="Eliminar")
+								a(href="#")
+									span.icon-eliminar-x
+						tr.car_summary
+							td(colspan="3").actions
+								div.coupon
+									label(for="coupon_code")
+										|	Si tienes código de descuento
+									input#coupon_code(type="text", name="coupon_code").input-text
+									input(type="submit", name="apply_coupon",value="Enviar").button
+							td.actualizar
+								input(type="submit", name="update_cart", value="Actualizar").buttonActualizar
+							td.order-total
 								|	Total
-						div.Carrito-tablaCell.col-3
-							p
+							td
 								|	$ 25.000
+				div.checkout-buttonContainer
+					a(href="#").checkout-button.button.alt.wc-forward
+						|	Comprar

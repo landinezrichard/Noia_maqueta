@@ -11,103 +11,144 @@
 		
 	& form
 		font-family 'CenturyGothicRegular', sans-serif
-		
-	&-tabla
-		display table
-		width 100%
-		
-	&-tablaHeading
-		display table-row
+/*Tabla dentro del formulario*/
+.shop_table
+	width 100%
+	font-size 0.87rem
+
+	& thead
 		text-transform uppercase
 		font-size 0.87rem
 		text-align left
-		
-		& p
-			margin 1em 30px
-		
-	&-tablaRow
-		display table-row
-		
-	&-tablaCell
-		display table-cell
-		border-bottom 1px solid $light_gray
-		
-		&:first-child
-			// width 40%
-			text-align left
-			
-		& input[type="number"]
-			width 50px
-			
-	&-eliminar
-		color black
-		text-decoration none
-		
-		&:hover
-			color red
-			text-decoration none
 
-	&-thumbnail
-		width 60px
-		height 60px
-		display inline-block
-		vertical-align middle
-		margin 0 30px
-		
-		& img
-			width 60px
-			height 60px
-	
-	&-name
-		display inline-block
-		vertical-align middle
-		margin 0 20px
-		
-	&-summary
-		
-		& .Carrito-tablaCell
-			border-bottom none
+		& tr th
+			padding 10px
+			border-bottom 1px solid $light_gray
 			
-			// &:first-child
-			// 	width auto
+			&.product-name
+				padding-left 30px
+
+	& tbody
+		text-align left
+
+		& tr.car_item
+			
+			& td
+				border-bottom 1px solid $light_gray
+
+			& td.product-thumbnail
+				// width 60px
+				// height 60px
+				// display inline-block
+				vertical-align middle
+				padding-left 30px
+
+				& img
+					width 60px
+					height 60px
+
+			& td.product-name
+				width 237px
+
+			& td.product-name a
+				color black
+				text-decoration none
 				
-		& label
-			display inline-block
-			vertical-align middle
-			margin 0 10px 0 30px
+				&:hover
+					color $verde_noia
+				
+			& td.product-price
+				text-align left
+				padding-left 10px
+				
+			& td.product-subtotal
+				padding-left 10px
+				
+			& td.product-remove
+				padding-left 32px
+				
+				& a
+					color black
+					text-decoration none
+					font-size 1.25rem
+
+					&:hover
+						color red
+						text-decoration none
+		& tr.car_summary
+			& td
+				padding 18px 10px 10px
 			
-		& input[type="text"]
-			display inline-block
-			vertical-align middle
-			width 130px
-			border-radius 5px
-/*Sistema grid columnas*/
-/* Set the widths */
-.col-1
-	width 8.333333%
-.col-2
-	width 16.666667%
-.col-3
-	width 25%
-.col-4
-	width 33.333333%
-.col-5
-	width 41.666667%
-.col-6
-	width 50%
-.col-7
-	width 58.333333%
-.col-8
-	width 66.666667%
-.col-9
-	width 75%
-.col-10
-	width 83.333333%
-.col-11
-	width 91.666667%
-.col-12
-	width 100%
-		
+			& td.actions
+				padding-left 30px
+
+				& div.coupon
+					display inline-block
+					
+					& .input-text
+						width 130px
+						height 25px
+						border-radius 5px
+						font-family 'CenturyGothicRegular', sans-serif
+						margin 0 10px
+						padding 5px
+						box-sizing border-box
+						
+					& .button
+						background-color $verde_noia_light
+						font-family 'CenturyGothicRegular', sans-serif
+						text-transform uppercase
+						width 80px
+						height 25px
+						font-size 0.81rem
+						cursor pointer
+						border-radius 5px
+						border none
+						transicion()
+						
+						&:hover
+							background-color $verde_noia_dark
+			& td.actualizar
+				& .buttonActualizar
+					background-color $verde_noia_light
+					font-family 'CenturyGothicRegular', sans-serif
+					text-transform uppercase
+					height 25px
+					font-size 0.81rem
+					cursor pointer
+					border-radius 5px
+					border none
+					transicion()
+					
+					&:hover
+						background-color $verde_noia_dark
+			& td.order-total
+				text-transform uppercase
+				font-family 'CenturyGothicBold', sans-serif
+.checkout-buttonContainer
+	text-align right
+
+.checkout-button
+	display inline-block
+	width 100px
+	height 25px
+	font-size 0.81rem
+	cursor pointer
+	border-radius 5px
+	color black
+	text-decoration none
+	text-transform uppercase
+	background-color $verde_noia_light
+	line-height 25px
+	text-align center
+	transicion()
+	margin 50px
+	
+	&:hover
+		background-color $verde_noia_dark
+		text-decoration none
+		font-family 'CenturyGothicBold', sans-serif
+
 /*Estilos input type number*/
 
 .quantity
@@ -164,8 +205,14 @@
 	position absolute
 	height 50%
 	top 0
+	
+	&:hover
+		color $verde_noia
 
 .quantity-button.quantity-down
 	position absolute
 	bottom -1px
 	height 50%
+	
+	&:hover
+		color $verde_noia

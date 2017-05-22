@@ -13,13 +13,15 @@
 		font-family 'CenturyGothicRegular', sans-serif
 /*Tabla dentro del formulario*/
 .shop_table
-	width 100%
+	width 90%
 	font-size 0.87rem
+	margin 0 5%
 
 	& thead
 		text-transform uppercase
 		font-size 0.87rem
 		text-align left
+		display none
 
 		& tr th
 			padding 10px
@@ -34,21 +36,21 @@
 		& tr.car_item
 			
 			& td
-				border-bottom 1px solid $light_gray
+				border 1px solid $light_gray
+				padding 10px
 
 			& td.product-thumbnail
-				// width 60px
-				// height 60px
-				// display inline-block
 				vertical-align middle
-				padding-left 30px
+				
+				& a
+					width 60px
+					height 60px
+					display inline-block
+					vertical-align middle
 
 				& img
 					width 60px
 					height 60px
-
-			& td.product-name
-				width 237px
 
 			& td.product-name a
 				color black
@@ -56,16 +58,8 @@
 				
 				&:hover
 					color $verde_noia
-				
-			& td.product-price
-				text-align left
-				padding-left 10px
-				
-			& td.product-subtotal
-				padding-left 10px
-				
+
 			& td.product-remove
-				padding-left 32px
 				
 				& a
 					color black
@@ -125,6 +119,28 @@
 			& td.order-total
 				text-transform uppercase
 				font-family 'CenturyGothicBold', sans-serif
+	/*Tabla responsive*/
+	& tr
+		display block
+		
+		& td
+			display block
+			text-align right
+			// text-align right !important // Important to overwrite order status inline styling
+			
+			&:before
+				content attr(data-title) ': '
+				font-weight 700
+				float left
+
+		&:nth-child(2n)
+			td
+				background-color rgba(0,0,0,0.025)
+	& tr.car_summary
+		& td
+			&:before
+				display none
+
 .checkout-buttonContainer
 	text-align right
 
@@ -216,3 +232,55 @@
 	
 	&:hover
 		color $verde_noia
+		
+@media screen and (min-width:840px)
+
+	.shop_table
+		width 100%
+		margin 0
+		
+		& thead
+			display table-header-group
+			
+		& tr
+			display table-row
+			
+			& td
+				display table-cell
+				text-align left
+
+		& tbody
+			text-align left
+
+			& tr.car_item
+				
+				& td
+					border none
+					border-bottom 1px solid $light_gray
+					padding 0
+				
+					&:before
+						display none
+
+				& td.product-thumbnail
+					padding-left 30px
+
+				& td.product-name
+					width 237px
+
+				& td.product-price
+					text-align left
+					padding-left 10px
+					
+				& td.product-subtotal
+					padding-left 10px
+					
+				& td.product-remove
+					padding-left 32px
+
+			& tr.car_summary
+				& td
+					padding 18px 10px 10px
+				
+				& td.actions
+					padding-left 30px

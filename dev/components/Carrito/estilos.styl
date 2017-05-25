@@ -6,7 +6,7 @@
 	& .Page-titleContainer .icon-carro
 		float right
 		font-size 2.3rem
-		margin 23px 30px 15px 10px
+		margin 23px 10px 15px
 		color black
 		
 	& form
@@ -32,12 +32,16 @@
 
 	& tbody
 		text-align left
+		
+		& tr td
+			border 1px solid $light_gray
+			padding 10px
 
 		& tr.car_item
 			
-			& td
-				border 1px solid $light_gray
-				padding 10px
+			// & td
+			// 	border 1px solid $light_gray
+			// 	padding 10px
 
 			& td.product-thumbnail
 				vertical-align middle
@@ -71,10 +75,6 @@
 						text-decoration none
 		& tr.car_summary
 			& td
-				padding 18px 10px 10px
-			
-			& td.actions
-				padding-left 30px
 
 				& div.coupon
 					display inline-block
@@ -102,6 +102,13 @@
 						
 						&:hover
 							background-color $verde_noia_dark
+			& td.actions
+				text-align left
+				
+				& div.coupon input.button
+					display inline-block
+					margin 5px 0
+
 			& td.actualizar
 				& .buttonActualizar
 					background-color $verde_noia_light
@@ -113,25 +120,27 @@
 					border-radius 5px
 					border none
 					transicion()
-					
+
 					&:hover
 						background-color $verde_noia_dark
+
 			& td.order-total
 				text-transform uppercase
 				font-family 'CenturyGothicBold', sans-serif
+				display none
 	/*Tabla responsive*/
 	& tr
 		display block
 		
 		& td
 			display block
-			text-align right
-			// text-align right !important // Important to overwrite order status inline styling
+			text-align right// Important to overwrite order status inline styling
 			
 			&:before
 				content attr(data-title) ': '
 				font-weight 700
 				float left
+				text-transform uppercase
 
 		&:nth-child(2n)
 			td
@@ -140,6 +149,9 @@
 		& td
 			&:before
 				display none
+				
+		& td.order-total-number:before
+			display block
 
 .checkout-buttonContainer
 	text-align right
@@ -158,7 +170,7 @@
 	line-height 25px
 	text-align center
 	transicion()
-	margin 50px
+	margin 30px
 	
 	&:hover
 		background-color $verde_noia_dark
@@ -235,6 +247,10 @@
 		
 @media screen and (min-width:840px)
 
+	.Carrito
+		& .Page-titleContainer .icon-carro
+			margin 23px 30px 15px 10px
+
 	.shop_table
 		width 100%
 		margin 0
@@ -248,9 +264,16 @@
 			& td
 				display table-cell
 				text-align left
+				
+			&:nth-child(2n)
+				td
+					background-color inherit
 
 		& tbody
 			text-align left
+			
+			& tr td
+				border none
 
 			& tr.car_item
 				
@@ -284,3 +307,11 @@
 				
 				& td.actions
 					padding-left 30px
+				
+				& td.order-total
+					display table-cell
+					
+				& td.order-total-number:before
+					display none
+	.checkout-button
+		margin 50px

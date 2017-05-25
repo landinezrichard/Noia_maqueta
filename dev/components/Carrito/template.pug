@@ -45,10 +45,10 @@ section.Carrito
 									input#coupon_code(type="text", name="coupon_code").input-text
 									input(type="submit", name="apply_coupon",value="Enviar").button
 							td.actualizar
-								input(type="submit", name="update_cart", value="Actualizar").buttonActualizar
+								input(type="submit", name="update_cart", value="Actualizar Carrito").buttonActualizar
 							td.order-total
 								|	Total
-							td
+							td.order-total-number(data-title="Total")
 								|	$ 25.000
 				div.checkout-buttonContainer
 					a(href="#").checkout-button.button.alt.wc-forward

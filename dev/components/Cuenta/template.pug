@@ -1,0 +1,55 @@
+section.Cuenta
+	div.u-centrar
+		div.Page-titleContainer
+			h2.Page-title
+				|	Mi Cuenta
+		div.Cuenta-content
+			div.Cuenta-left
+				div.Cuenta-registrado
+					h4.Page-subTitle
+						|	Ya estas registrado
+					p.Page-txt
+						|	xxxxxxxxx
+					form
+						input(type="email", placeholder="E-mail*", required).Form-input
+						input(type="password", placeholder="Contraseña",required).Form-input
+						fieldset.Cuenta-formField
+							a(href="#").Cuenta-formLink
+								|	Olvidé contraseña
+							input(type="submit", name="ingreso",value="Entrar").Cuenta-button
+				div.Cuenta-invitado
+					h4.Page-subTitle
+						|	Comprar como invitado
+					p.Page-txt
+						|	xxxxxxxxx
+					form
+						input(type="text", placeholder="Nombre*", required).Form-input
+						input(type="text", placeholder="Apellidos*", required).Form-input
+						input(type="email", placeholder="E-mail*", required).Form-input
+						fieldset.Cuenta-formField
+							input(type="submit", name="ingreso",value="Enviar").Cuenta-button
+			div.Cuenta-right
+				div.Cuenta-nuevo
+					h4.Page-subTitle
+						|	Nuevo usuario
+					p.Page-txt
+						|	xxxxxxxxx
+					form
+						input(type="text", placeholder="Nombre*", required).Form-input
+						input(type="text", placeholder="Apellidos*", required).Form-input
+						select(name="select", required).Form-input
+							option(value="", disabled selected)
+								|	Tipo de documento
+							option(value="value1")
+								|	Value 1
+							option(value="value2")
+								|	Value 2
+							option(value="value3")
+								|	Value 3
+						input(type="text", placeholder="Numero de documento", required).Form-input
+						input(type="text", placeholder="Telefono", required).Form-input
+						input(type="email", placeholder="E-mail*", required).Form-input
+						input(type="password", placeholder="Registre contraseña",required).Form-input
+						input(type="password", placeholder="Confirme contraseña",required).Form-input
+						fieldset.Cuenta-formField
+							input(type="submit", name="registro",value="Registrarse").Cuenta-button

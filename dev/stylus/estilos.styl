@@ -41,6 +41,7 @@ $black_footer = #1A1A1A
 $black_light = #333333
 
 $light_gray = #c8c8c8
+$gray = #666666
 
 $transparent_black = rgba(0,0,0,.5);
 
@@ -87,11 +88,11 @@ video, object, embed, iframe
 	left 0
 	width 100%
 	height 100%
-/*	
-*
-	box-sizing border-box
-	border 1px solid red
-*/
+
+fieldset	
+	padding 0
+	margin 0
+	border none
 //---------------------------------------------------------------------
 // UTILIDADES (REUSABLE CLASES)
 //---------------------------------------------------------------------
@@ -119,6 +120,30 @@ video, object, embed, iframe
 	margin 28px 7px 15px
 	text-align left
 	float left
+	
+.Page-subTitle
+	font-family 'CenturyGothicBold', sans-serif
+	font-size 0.87rem
+	color $verde_noia_light
+	text-align left
+	
+.Page-txt
+	font-family 'CenturyGothicRegular', sans-serif
+	font-size 0.75rem
+	color black
+	text-align left
+	
+.Form-input
+	font-family 'CenturyGothicRegular', sans-serif
+	font-size 0.75rem
+	color $gray
+	display inline-block
+	width 100%
+	padding 7px
+	border 1px solid black
+	border-radius 5px
+	margin 3px 0
+	box-sizing border-box
 	
 //---------------------------------------------------------------------
 // COMPONENTES
@@ -153,6 +178,9 @@ video, object, embed, iframe
 
 /*CARRITO*/
 @import "../components/Carrito/estilos.styl"
+
+/*CUENTA*/
+@import "../components/Cuenta/estilos.styl"
 
 /*FOOTER*/
 @import "../components/Footer/estilos.styl"

@@ -1,0 +1,87 @@
+/*CUENTA*/
+
+.Cuenta
+	width 100%
+	
+	// & *
+	// 	border 1px solid red
+	// 	box-sizing border-box
+	
+	&-content
+		padding 10px
+	
+	&-left
+	&-right
+		width 95%
+		display inline-block
+		vertical-align top
+		text-align left
+	
+	&-left
+		margin 0 2.5%
+	
+	&-right
+		margin 0 2.5%
+	
+	&-registrado
+	&-invitado
+	&-nuevo
+		margin 15px
+		
+	&-registrado form input.Cuenta-button
+		float right
+		
+	&-invitado form fieldset.Cuenta-formField
+	&-nuevo form fieldset.Cuenta-formField
+		text-align center
+		
+	&-formField
+		padding 16px 0
+		
+	&-formLink
+		font-size 0.75rem
+		color black
+		text-decoration underline
+		cursor pointer
+		ont-family 'CenturyGothicRegular', sans-serif
+		font-style italic
+		transicion()
+		
+		&:hover
+			color $verde_noia
+		
+	&-button
+		background $verde_noia
+		color black
+		font-family 'CenturyGothicRegular', sans-serif
+		font-size 0.81rem
+		text-transform uppercase
+		border none
+		padding 8px 10px
+		cursor pointer
+		transicion()
+		
+		&:hover
+			background $verde_noia_dark
+			font-family 'CenturyGothicBold', sans-serif
+			
+@media screen and (min-width:600px)
+	.Cuenta
+		&-content
+			padding 25px
+
+		&-left
+		&-right
+			width 45%
+			margin 0
+		
+		&-left
+			margin-right 2.5%
+		
+		&-right
+			margin-left 2.5%
+			
+		&-registrado
+		&-invitado
+		&-nuevo
+			margin 25px

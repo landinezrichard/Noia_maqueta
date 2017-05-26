@@ -1,0 +1,68 @@
+section.FinCompra
+	div.u-centrar
+		div.Page-titleContainer
+			h2.Page-title
+				|	Finalizar Compra
+		form.FinCompra-content
+			div.FinCompra-left
+				div
+					h4.Page-subTitle
+						|	Datos para envío
+					div
+						fieldset
+							label(for="nombre").Form-label
+								|	Nombre de quien recibe la compra*
+							input(type="text", placeholder="Nombre*", required).Form-input#nombre
+						fieldset
+							label(for="ciudad").Form-label
+								|	Ciudad*
+							input(type="text", placeholder="Ciudad*", required).Form-input#ciudad
+						fieldset
+							label(for="tel").Form-label
+								|	Teléfono*
+							input(type="text", placeholder="Teléfono*", required).Form-input#tel
+						fieldset
+							label(for="dir").Form-label
+								|	Dirección*
+							input(type="text", placeholder="Dirección*", required).Form-input#dir
+			div.FinCompra-right
+				table(cellspacing="0").FinCompra-tabla
+					thead
+						tr
+							th.product-name(colspan="2")
+								|	Producto
+							th.product-quantity
+								|	Cantidad
+							th.product-price
+								|	Precio unidad
+					tbody
+						tr.car_item
+							td.product-thumbnail(data-title="Imagen del Producto")
+								a(href="#").Carrito-thumbnail
+									img(src="../images/03-colecciones/1.jpg")
+							td.product-name(data-title="Producto")
+								a(href="#")
+									|	Collar custom 1
+							td.product-quantity(data-title="Cantidad")
+								|	3
+								//- div.quantity
+								//- 	input(type="number", step="1", min="0", value="1")
+							td.product-price(data-title="Precio unidad")
+								|	$ 25.000
+						tr.car_summary
+							td(colspan="3")
+								|	Subtotal
+							td.order-subtotal-number(data-title="Subtotal")
+								|	$ 25.000
+						tr.car_summary
+							td(colspan="3")
+								|	Envio
+							td.order-envio(data-title="Envio")
+								|	$ 5.000
+						tr.car_summary
+							td(colspan="3")
+								|	Total
+							td.order-total-number(data-title="Total")
+								|	$ 30.000
+				div.FinCompra-buttonContainer
+					input(type="submit", name="pagar",value="Pagar").FinCompra-button

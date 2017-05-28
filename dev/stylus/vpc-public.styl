@@ -1,0 +1,118 @@
+#vpc-preview, .vpc-cart-config-image, .saved-config-preview
+{
+	position: relative;
+	border: 1px solid #f1f4f9;
+}
+#vpc-preview img, .vpc-cart-config-image img, .saved-config-preview img
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+}
+#vpc-preview img:first-child, .vpc-cart-config-image img:first-child, .saved-config-preview img:first-child
+{
+	position: relative;
+}
+
+.vpc-success, .vpc-failure
+{
+	color: white;
+	padding: 5px;
+	text-align: center;
+}
+.vpc-success
+{
+	background-color: green;    
+}
+.vpc-success a
+{
+	color: greenyellow;
+}
+.vpc-failure
+{
+	background-color: red;
+}
+.vpc-cart-config
+{
+	border: 1px solid #c8c8c8;
+	margin-bottom: 5px;
+	padding: 5px;
+	
+}
+.vpc-cart-config img
+{
+	/*border: 1px solid #c8c8c8;*/
+	margin: 5px;
+	padding: 5px;
+	display: inline-block;
+	vertical-align: middle;
+	max-width: 100%;
+	/*max-height: 30px;*/
+}
+.vpc-cart-config-image{
+	max-width: 150px;
+	margin: 0 auto;
+}
+
+.woocommerce .vpc-cart-config-image img{
+	width:100% !important;
+	max-width: 100%;
+	background: none;
+}
+.vpc-cart-options-container{
+	padding:20px;
+}
+.vpc-cart-options-container img,.woocommerce .vpc-cart-options-container img{
+	max-width: 30px;
+	max-height: 30px;
+}
+.vpc-single-option-wrap
+{
+	display: inline-block;
+}
+.vpc-cart-options-container
+{
+	/*border: 1px solid #f1f4f9; */
+	padding: 5px; 
+	margin: 5px
+}
+
+.vpc-cart-options-container > div{
+	display: table;
+	width:100%;
+	border:1px solid #ccc;
+	padding:0 5px;
+	margin-bottom: 10px;
+	box-sizing: border-box;
+}
+.vpc-cart-options-container > div > strong{
+	display: table-cell;
+	/*width:80%;*/
+	vertical-align: middle;
+}
+.vpc-cart-options-container > div > strong > span{
+	font-weight: normal;
+}
+
+.vpc-cart-options-container > div > img{
+	float:right;
+}
+
+#vpc-ajax-container.vpc-loading{
+	min-height:500px;
+	position:relative;
+}
+#vpc-ajax-container.vpc-loading > img{
+	position: absolute;
+	top:0;
+	bottom: 0;
+	left:0;
+	right: 0;
+	margin:auto;
+}
+#vpc-preview img
+{
+	background: none !important;
+}

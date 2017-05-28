@@ -41,9 +41,11 @@ $black_footer = #1A1A1A
 $black_light = #333333
 
 $light_gray = #c8c8c8
+$light_gray2 = #808080
 $gray = #666666
 
 $transparent_black = rgba(0,0,0,.5);
+$transparent_white = rgba(238,238,238,0.6)
 
 //---------------------------------------------------------------------
 // MIXINS
@@ -149,6 +151,13 @@ fieldset
 	font-family 'CenturyGothicRegular', sans-serif
 	font-size 0.75rem
 	color black
+
+//---------------------------------------------------------------------
+// ESTILOS VISUAL PRODUCT BUILDER
+//---------------------------------------------------------------------
+	
+@import "vpc-public.styl"
+@import "vpc-default-skin.styl"
 	
 //---------------------------------------------------------------------
 // COMPONENTES
@@ -189,6 +198,9 @@ fieldset
 
 /*FINCOMPRA*/
 @import "../components/FinCompra/estilos.styl"
+
+/*FACTORY*/
+@import "../components/Factory/estilos.styl"
 
 /*FOOTER*/
 @import "../components/Footer/estilos.styl"

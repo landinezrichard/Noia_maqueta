@@ -1,0 +1,97 @@
+/*FACTORY*/
+
+.Factory
+	width 100%
+	
+	&-content
+		padding 10px
+		
+	&-instrucciones
+		text-align left
+		font-family 'CenturyGothicRegular', sans-serif
+		color $black_light
+		font-style italic
+		font-size 0.87rem
+		
+	&-categoryContainer
+		width 135px
+		// position relative
+		position absolute
+		
+	&-categoryTitle
+		font-family 'CenturyGothicBold', sans-serif
+		font-size 0.93rem
+		text-transform uppercase
+		cursor pointer
+		margin 7px 0
+		
+		& span.icon-flecha-down
+			display inline-block
+			margin 0 7px
+			font-size 1.37rem
+			vertical-align bottom
+
+	&-categoryList
+		background-color $transparent_white
+		border 1px solid $light_gray2
+		padding 15px
+		text-align left
+		width 135px
+		position absolute
+		z-index 3
+		display none
+	
+	&-categoryItem
+		display inline-block
+		width 100%
+		color black
+		text-transform uppercase
+		margin 5px 0
+		cursor pointer
+		transicion()
+		
+		&:hover
+			color $verde_noia
+
+	&-container
+		padding 20px
+		position relative
+		
+	&-mesaTitle
+		font-family 'CenturyGothicRegular', sans-serif
+		color black
+		font-size 1.20rem
+		text-transform uppercase
+		margin 5px 0
+		
+	&-buttonCarContainer
+		margin 15px 0
+		#vpc-add-to-cart
+		.Factory-buttonVerCar
+			font-family 'CenturyGothicBold', sans-serif
+			color black
+			text-transform uppercase
+			font-size 0.93rem
+			border none
+			border-radius 5px
+			background-color $verde_noia
+			padding 7px 10px
+			cursor pointer
+			transicion()
+			
+			&:hover
+				background-color $verde_noia_dark
+				
+/*LUPA*/
+.imgLupaLarge
+	width 175px
+	height 175px
+	position absolute
+	z-index 2
+	border-radius 100%
+	/*Multiple box shadows to achieve the glass effect*/
+	box-shadow 0 0 0 7px rgba(255, 255, 255, 0.85), 0 0 7px 7px rgba(0, 0, 0, 0.25), inset 0 0 40px 2px rgba(0, 0, 0, 0.25)
+	/*Lets load up the large image first*/
+	// background: url('http://thecodeplayer.com/uploads/media/iphone.jpg') no-repeat;
+	/*hide the glass by default*/
+	display none

@@ -125,17 +125,18 @@
 	font-size: 1.5rem;
 	margin: 0 25px;
 }
+
 //Contenedor componentes
 #vpc-components{
 	margin-top: 50px;
-	width: 38%;
-	display: inline-block;
+	// width: 38%;
+	// display: inline-block;
 }
-//Conteneder preview
-#vpc-components + div{
-	width: 60%;
-	display: inline-block;
-}
+//Contenedor preview
+// #vpc-components + div{
+// 	width: 60%;
+// 	display: inline-block;
+// }
 
 .vpc-selected-icon{
 	position: absolute;
@@ -325,3 +326,16 @@
 {
 	margin-top: 10px;
 }
+
+@media screen and (min-width:600px)
+
+	//Contenedor componentes
+	#vpc-components{		
+		width: 38%;
+		display: inline-block;
+	}
+	//Conteneder preview
+	#vpc-components + div{
+		width: 60%;
+		display: inline-block;
+	}

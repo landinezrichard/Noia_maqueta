@@ -20,15 +20,69 @@ $(document).ready(function() {
 		}
 	});
 
+	/*Aparecer formulario busqueda lupa header*/
+	$('.lupa-container').on('click','.Menu-link',function(e){
+		event.preventDefault();
+		$('.lupa-container').find('.search-form').slideToggle();
+	});
+
 	/*SCRIPTS SOLO HOME*/
 
 	/*Botton home, seccion siguiente*/
-
 	$('.Banner-btnDown').click(function(){
 		var target = $('.HomeButtons');
 		$('body, html').animate({
 			scrollTop: $(target).offset().top
 		}, 300);
+	});
+
+	/*Slide Banner principal*/
+	$('.Banner').owlCarousel({
+		navigation : false, // Show next and prev buttons
+		slideSpeed : 300,
+		paginationSpeed : 400,
+		singleItem:true,
+		// Navigation
+		navigationText : ['Anterior','Siguiente'],
+		rewindNav : true,
+		scrollPerPage : true,
+		//Pagination
+		pagination : true,
+		paginationNumbers: false,
+		autoplay: true
+	});
+
+	/*Slide Banner Home publicidad*/
+	$('.Publicidad').owlCarousel({
+		navigation : false, // Show next and prev buttons
+		slideSpeed : 300,
+		paginationSpeed : 400,
+		singleItem:true,
+		// Navigation
+		navigationText : ['Anterior','Siguiente'],
+		rewindNav : true,
+		scrollPerPage : true,
+		//Pagination
+		pagination : true,
+		paginationNumbers: false
+	});
+
+	/*FIN SCRIPTS SOLO HOME*/
+
+
+	/*Slide Banner Colecciones/Factory*/
+	$('.SliderR').owlCarousel({
+		navigation : false, // Show next and prev buttons
+		slideSpeed : 300,
+		paginationSpeed : 400,
+		singleItem:true,
+		// Navigation
+		navigationText : ['Anterior','Siguiente'],
+		rewindNav : true,
+		scrollPerPage : true,
+		//Pagination
+		pagination : true,
+		paginationNumbers: false
 	});
 
 	/*Cambiar estilo input type= number*/
@@ -66,13 +120,44 @@ $(document).ready(function() {
 
 	});
 
-	/*Selector Categorya Factory*/
+	/*Selector Category Factory*/
 	$('.Factory-categoryTitle').click(function(e){
 		e.preventDefault();
 		$('.Factory-categoryList').slideToggle();
 	});
 
-	/*LUPA*/
+	/*Mostrar PRODUCTOS FACTORY (acordeon)*/
+	$('.Factory-productConfigurator').on('click','.vpc-component-header', function(e){
+		$(this).siblings('.vpc-options').slideToggle();
+	});
+	/*ARMAR PRODUCTOS FACTORY*/
+	$('.Factory-productConfigurator').on('click','.vpc-options .vpc-single-option-wrap input', function(e){
+		var opcion_valor = $(this).val();
+		var opcion_imagen = $(this).attr('data-img');
+		var componente_header = $(this).parents('.vpc-component').find('.vpc-component-header');
+		componente_header.find('span.vpc-selected.txt').text(opcion_valor);
+		componente_header.find('span.vpc-selected-icon img').attr('src', opcion_imagen);
+
+		//obtenemos todos los componentes seleccionados
+		var componentes_seleccionados = $('input:checked');
+		
+		var vista_previa = '';
+
+		for (var i = 0; i < componentes_seleccionados.length; i++) {
+			
+			//obtenemos la ruta de la imagen
+			var src = $(componentes_seleccionados[i]).attr('data-img');	
+			
+			//creamos un html con todas las imagenes
+			vista_previa += '<img src='+src+'>';
+			
+		}
+		//mostramos las nuevas imagenes, armando la joya
+		$('#vpc-preview').html(vista_previa);
+		
+	});
+
+	/*LUPA Factory*/
 	var native_width = 0;
 	var native_height = 0;
 

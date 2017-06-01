@@ -7,16 +7,19 @@ nav.Menu
 			a.Menu-link(href="")
 				|	La marca
 		li.Menu-item
-			a.Menu-link(href="")
+			a.Menu-link(href="colecciones.html")
 				|	Colecciones
 		li.Menu-item
-			a.Menu-link(href="")
+			a.Menu-link(href="factory.html")
 				|	Factory
 		li.Menu-item
 			a.Menu-link(href="contacto.html")
 				|	Contacto
-		li.Menu-item
+		li.Menu-item.lupa-container
 			a.Menu-link(href="")
 				span.icon-lupa
+			form(method="get", class="search-form", action="")
+				input(type="text", value="", name="s", id="s", placeholder="buscar...").lupa-input
+				input(type="submit", value="Buscar").lupa-sbutton
 		li.Menu-item
 			include ../Buttons/buttonCar.pug

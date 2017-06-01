@@ -27,6 +27,28 @@
 		width 100%
 		background $transparent_black
 		
+		//para WP
+		& .menu-item
+			width 100%
+			
+			&.current-menu-item a
+				color $verde_noia
+			
+			& a
+				color white
+				font-family:"CenturyGothicRegular";
+				font-size 1.2rem
+				font-weight 500
+				display inline-block
+				width 100%
+				cursor pointer
+				transition all .3s ease
+				padding 20px 0
+					
+				&:hover
+					color $verde_noia
+					font-weight 600
+		
 	&-item
 		width 100%
 	
@@ -60,6 +82,18 @@
 			align-items center
 			background transparent
 			height 100px
+			
+			//para WP
+			& .menu-item
+				display inline-block
+				vertical-align middle
+				margin 0 10px
+				width auto
+				height auto
+				line-height normal
+				& a
+					padding 0
+					font-size .87rem
 		&-item
 			display inline-block
 			vertical-align middle

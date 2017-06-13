@@ -16,7 +16,7 @@ INSTALAR TODO CON:
 var gulp    = require('gulp'),
 	browserSync = require('browser-sync').create(),  
 	stylus    = require('gulp-stylus'),
-	nib       = require('nib')
+	nib       = require('nib'),
 	pug       = require('gulp-pug'),
 	imageop   = require('gulp-image-optimization'),
 	gutil     = require('gulp-util'),

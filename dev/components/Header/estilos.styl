@@ -2,7 +2,7 @@
 
 .Header
 	overflow auto
-	background $transparent_black
+	background #333333
 	position fixed
 	top 0
 	left 0
@@ -30,6 +30,10 @@
 		padding 0
 		position absolute
 		width 1px
+
+@media screen and (min-width:600px)
+	.Header
+		background $transparent_black
 		
 @media screen and (min-width:840px)
 	.Header

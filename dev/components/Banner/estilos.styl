@@ -23,8 +23,8 @@
 		
 	&-txtOver
 		position absolute
-		left 35px
-		top 35%
+		left 30px
+		top 10px
 		font-family 'CenturyGothicBold', sans-serif
 		color white
 		text-align left
@@ -63,6 +63,19 @@
 // .Banner .owl-controls .owl-page.active span,
 // .Banner .owl-controls .owl-page:hover span
 // 	background $naranja1
+
+@media screen and (min-width:480px)
+	.Banner
+		&-txtOver
+			left 35px
+			top 35%
+			
+			& h2
+				font-size 2.39rem
+				margin 0
+				
+				& span
+					font-size 1.91rem
 
 @media screen and (min-width:600px)
 	.Banner
